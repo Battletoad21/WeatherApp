@@ -17,10 +17,13 @@ body{
   margin-top: 35vh;
 }
 
+.location-city{
+  font-size: 3em;
+}
+
 .iconPic{
   margin-top: 10vh;
   position: relative;
-  left: 3em;
 }
 
 .temp-section{
