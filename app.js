@@ -28,22 +28,23 @@ window.addEventListener('load', () => {
             let iconurl = "http://openweathermap.org/img/w/" + weatherIcon + ".png";
             document.getElementById("iconPic").src = iconurl; 
             
+            //From Kelvin To Celsius
+            let celsiusUnprocessed = temp - 273.15;
+            let celsius = Math.floor(celsiusUnprocessed);
+
             // SET Dom elements from the API
-            temperature.textContent = temp;
+            temperature.textContent = celsius;
             temperatureDescription.textContent = description;
             locationCity.textContent = city;
-
-            //From Kelvin To Celsius
-            let celsius = temp - 273.15;
   
             // Change temperature from Celsius/Fahrenheit/Kelvin
             temperature.addEventListener('click', () => {
-              if (tempSpan.textContent === "K"){
-                tempSpan.textContent = "C";
-                temperature.textContent = Math.floor(celsius);
-              }else {
-                tempSpan.textContent = "K"
+              if (tempSpan.textContent === "C"){
+                tempSpan.textContent = "K";
                 temperature.textContent = temp;
+              }else {
+                tempSpan.textContent = "C"
+                temperature.textContent = Math.floor(celsius);
               }
             })
           });
