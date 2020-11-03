@@ -10,7 +10,7 @@ body{
   flex-direction: column;
   align-items: center;
   background: url(https://i.redd.it/tkywljbnca651.png);
-  font: italic 1.2em "Fira Sans", serif;
+  font-family: 'Squada One', cursive;
   color: floralwhite;
 }
 .location {
