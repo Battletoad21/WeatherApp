@@ -25,6 +25,7 @@ body{
 
 .temp-section{
   display: flex;
+  justify-content: center;
   cursor: pointer;
 }
 
